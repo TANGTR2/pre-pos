@@ -12,5 +12,5 @@ function collectSameElements(collectionA, collectionB) {
 		      else continue;
 		    }
 		  }
-  return same[num];
+  return same;
 }
