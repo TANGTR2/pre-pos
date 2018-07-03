@@ -1,14 +1,14 @@
 'use strict';
 
-function collectSameElements(collectionA, objectB) {
+function collectSameElements(collectionA, collectionB) {
   var cb=new Array();
 	var bsize=collectionB.value.length;
 	for(var i=0;i<bsize;i++)
 		cb[i]=(collectionB.value)[i];
 	var same=new Array();
 	var num=0;
-	 for(var i=0;i<bsize;i++){
-		    for(var j=0;j<collectionB.length;j++){
+	 for(var i=0;i<collectionA.length;i++){
+		    for(var j=0;j<bsize;j++){
 		      if(collectionA[i]==cb[j]){
 		    	 same[num]=collectionA[i];
 		    	 num++;
@@ -16,5 +16,5 @@ function collectSameElements(collectionA, objectB) {
 		      else continue;
 		    }
 		  }
-  return same[num];
+  return same;
 }
